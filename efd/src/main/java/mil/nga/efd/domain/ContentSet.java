@@ -92,7 +92,7 @@ import com.solers.util.unit.TimeIntervalUnit;
     		query = "SELECT c FROM ContentSet c WHERE c.name = :name"),
     @NamedQuery(
     		name = ContentSetDAO.GET_SUPPLIER_SETS, 
-    		query = "SELECT c FROM ContentSet c WHERE c.supplier = 1")
+    		query = "SELECT c FROM ContentSet c WHERE c.supplier = true")
     })
 //@ValidFtpConnection
 public class ContentSet implements Serializable {

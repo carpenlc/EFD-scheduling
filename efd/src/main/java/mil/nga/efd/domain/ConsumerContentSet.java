@@ -57,7 +57,7 @@ import com.solers.util.unit.TimeIntervalUnit;
             query = "SELECT c FROM ConsumerContentSet c WHERE c.name LIKE :name"), 
     @NamedQuery(
             name = ConsumerContentSetDAO.GET_CONSUMER_SETS, 
-            query = "SELECT c FROM ConsumerContentSet c WHERE c.supplier = 0") 
+            query = "SELECT c FROM ConsumerContentSet c WHERE c.supplier = false") 
     })
 public class ConsumerContentSet extends ContentSet {
 
