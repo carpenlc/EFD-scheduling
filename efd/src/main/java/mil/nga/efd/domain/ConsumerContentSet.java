@@ -1,17 +1,3 @@
-/****************************************************************
- *
- * Solers, Inc. as the author of Enterprise File Delivery 2.1 (EFD 2.1)
- * source code submitted herewith to the Government under contract
- * retains those intellectual property rights as set forth by the Federal 
- * Acquisition Regulations agreement (FAR). The Government has 
- * unlimited rights to redistribute copies of the EFD 2.1 in 
- * executable or source format to support operational installation 
- * and software maintenance. Additionally, the executable or 
- * source may be used or modified for by third parties as 
- * directed by the government.
- *
- * (c) 2009 Solers, Inc.
- ***********************************************************/
 package mil.nga.efd.domain;
 
 import javax.persistence.Column;
@@ -36,17 +22,22 @@ import com.solers.util.unit.TimeIntervalUnit;
 
 
 /**
- * User: DMartin Date: Feb 26, 2007 Time: 4:08:51 PM A pojo class that is persisted to a database in the table 'consumer_set_info'. ConsumerContentSet extends
- * the ContentSet class to hold the information that is specific to a consumer content set. The information in the subclass is stored in the database table
- * consumer_set_info and has a one-to-one relationship to the content_set table.
+ * User: DMartin Date: Feb 26, 2007 Time: 4:08:51 PM A pojo class that is 
+ * persisted to a database in the table 'consumer_set_info'. 
+ * ConsumerContentSet extends the ContentSet class to hold the information 
+ * that is specific to a consumer content set. The information in the subclass 
+ * is stored in the database table consumer_set_info and has a one-to-one 
+ * relationship to the content_set table.
  * 
- * The primary key on this table is also a foreign key to the content_set table.
+ * The primary key on this table is also a foreign key to the content_set 
+ * table.
  * 
- * The named query GET_CONSUMER_BY_NAME may be used to query a single consumer content set if its logical name is known.
+ * The named query GET_CONSUMER_BY_NAME may be used to query a single consumer 
+ * content set if its logical name is known.
  * 
- * The named query GET_CONSUMER_SETS returns a complete list of consumer content sets.
+ * The named query GET_CONSUMER_SETS returns a complete list of consumer 
+ * content sets.
  */
-
 @Configurable("consumerPrototype")
 @Entity
 @Table(name = "content_set_consumer")

@@ -1,12 +1,22 @@
 package mil.nga.efd.scheduling;
 
+import javax.annotation.PostConstruct;
+
 import org.quartz.Scheduler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Component;
 
 
+/**
+ * This class represents a complete re-write of the EFD scheduling subsystem.
+ * The original 
+ * 
+ * @author L. Craig Carpenter
+ */
+@Component
 @Configurable
 public class ContentSetSchedulerFactory {
 
@@ -32,8 +42,21 @@ public class ContentSetSchedulerFactory {
 	@Autowired
 	public Scheduler scheduler;
 	
+	/**
+	 * Default no-arg constructor.
+	 */
+	public ContentSetSchedulerFactory() {}
 	
-	
-	
+	@PostConstruct
+	public void checkAutowiring() {
+		if (scheduler == null) {
+			System.out.println("ERROR: Quartz scheduler not injected!");
+		}
+		else {
+			System.out.println("We're good with Quartz.");
+		}
+		
+	}
+
 	
 }

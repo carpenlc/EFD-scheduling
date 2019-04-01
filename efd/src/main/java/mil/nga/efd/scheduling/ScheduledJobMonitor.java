@@ -7,6 +7,14 @@ import org.quartz.listeners.TriggerListenerSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Class used to listen for completion of scheduled tasks.  In the original EFD
+ * code base this class regenerated a new scheduler with the same configuration 
+ * of the job that just completed.  With the new design, this step is not 
+ * required.  This class only logs the fact that a job completed.
+ * 
+ * @author L. Craig Carpenter
+ */
 public class ScheduledJobMonitor extends TriggerListenerSupport {
 
 	/**
